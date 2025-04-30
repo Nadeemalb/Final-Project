@@ -1,0 +1,32 @@
+---
+title: "Introduction to mpgInsights"
+output: rmarkdown::html_vignette
+vignette: >
+  %\VignetteIndexEntry{Introduction to mpgInsights}
+  %\VignetteEngine{knitr::rmarkdown}
+  \usepackage[utf8]{inputenc}
+---
+
+```{r setup, include = FALSE}
+library(mpgInsights)
+summarize_mpg()
+plot_mpg()
+
+---
+
+## 🧾 LICENSE (MIT)
+
+
+---
+
+## 📃 README.md
+
+```markdown
+# mpgInsights
+
+`mpgInsights` provides summary and visualization tools for the `mpg` dataset.
+
+## Installation
+
+```r
+devtools::install_github("yourusername/mpgInsights")
