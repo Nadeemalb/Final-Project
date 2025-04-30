@@ -1,0 +1,4 @@
+export(summarize_mpg)
+export(plot_mpg)
+importFrom(dplyr, group_by, summarise)
+importFrom(ggplot2, ggplot, aes, geom_point, labs, theme_minimal)
