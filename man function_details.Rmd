@@ -1,0 +1,32 @@
+---
+title: "Function Implementation Details"
+output: github_document
+---
+
+# mpgInsights Package: Function Implementation Details
+
+This document provides a clear explanation of the core functions implemented in my `mpgInsights` R package.
+
+---
+
+## 1. `summarize_mpg()`
+
+### Purpose:
+This function calculates the average **city (cty)** and **highway (hwy)** miles per gallon for each type of vehicle class in the `mpg` dataset.
+
+### How It Works:
+- Uses `dplyr::group_by()` to categorize vehicles by `class`.
+- Then, it calculates the mean for both `cty` and `hwy` using `dplyr::summarise()`.
+- The `.groups = "drop"` argument ensures that the returned data frame is ungrouped.
+
+### Code:
+```
+summarize_mpg <- function() {
+  mpg %>%
+    dplyr::group_by(class) %>%
+    dplyr::summarise(
+      avg_cty = mean(cty),
+      avg_hwy = mean(hwy),
+      .groups = "drop"
+    )
+}
