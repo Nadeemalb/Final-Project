@@ -1,1 +1,17 @@
+Package: mpgInsights
+Type: Package
+Title: Tools for Summarizing and Visualizing MPG Dataset
+Version: 0.1.0
+Date: 2025-04-25
+Author: Nadeem Al Barwani
+Maintainer: Nadeem Al Barwani <nadeemalb@gmail.com>
+Description: Provides summary statistics and visualization tools for the 'mpg' dataset.
+License: MIT + file LICENSE
+Encoding: UTF-8
+LazyData: true
+Imports:
+    dplyr,
+    ggplot2
+Roxygen: list(markdown = TRUE)
+VignetteBuilder: knitr
 
