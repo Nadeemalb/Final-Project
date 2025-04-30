@@ -1,0 +1,17 @@
+#' Summarize MPG by Vehicle Class
+#'
+#' This function summarizes average city and highway MPG by vehicle class.
+#'
+#' @return A data frame with average MPG values per class.
+#' @export
+#'
+#' summarize_mpg()
+summarize_mpg <- function() {
+  mpg %>%
+    dplyr::group_by(class) %>%
+    dplyr::summarise(
+      avg_cty = mean(cty),
+      avg_hwy = mean(hwy),
+      .groups = "drop"
+    )
+}
