@@ -38,4 +38,3 @@ summarize_mpg()
 # MPG scatter plot
 plot_mpg()
 
-
