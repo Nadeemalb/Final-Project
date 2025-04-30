@@ -1,0 +1,41 @@
+
+---
+
+## 📝 BLOG POST
+
+**Title:** *Creating mpgInsights: An R Package for Fuel Economy Analysis*
+
+---
+
+### 🚀 Introduction
+
+As part of my R programming course final project, I developed an R package called **mpgInsights**. This package provides tools to summarize and visualize the popular `mpg` dataset from `ggplot2`.
+
+---
+
+### 💡 Design Decisions
+
+- **Functions:** Two main functions:
+  - `summarize_mpg()` to group and average MPG by vehicle class.
+  - `plot_mpg()` to visualize city vs highway MPG.
+- **Libraries:** The package uses `dplyr` for data manipulation and `ggplot2` for plotting.
+- **Class System:** Uses base R functions and `ggplot` objects (S3).
+- **License:** MIT License to keep the package open and reusable.
+
+---
+
+### 🧪 Installation
+
+```r
+devtools::install_github("yourusername/mpgInsights")
+
+Usage: 
+library(mpgInsights)
+
+# MPG summary
+summarize_mpg()
+
+# MPG scatter plot
+plot_mpg()
+
+
