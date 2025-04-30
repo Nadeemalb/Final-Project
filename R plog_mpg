@@ -17,3 +17,6 @@ test_that("plot_mpg returns a ggplot object", {
   result <- plot_mpg()
   expect_s3_class(result, "ggplot")
 })
+
+mpg_sample <- head(mpg, 50)
+save(mpg_sample, file = "data/mpg_sample.RData")
