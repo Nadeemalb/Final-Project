@@ -12,3 +12,8 @@ plot_mpg <- function() {
     ggplot2::labs(title = "City vs Highway MPG", x = "City MPG", y = "Highway MPG") +
     ggplot2::theme_minimal()
 }
+
+test_that("plot_mpg returns a ggplot object", {
+  result <- plot_mpg()
+  expect_s3_class(result, "ggplot")
+})
