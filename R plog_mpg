@@ -1,0 +1,14 @@
+#' Plot City vs Highway MPG
+#'
+#' Generates a scatter plot of city vs highway MPG, colored by vehicle class.
+#'
+#' @return A ggplot2 object.
+#' @export
+#'
+#' plot_mpg()
+plot_mpg <- function() {
+  ggplot2::ggplot(mpg, ggplot2::aes(x = cty, y = hwy, color = class)) +
+    ggplot2::geom_point() +
+    ggplot2::labs(title = "City vs Highway MPG", x = "City MPG", y = "Highway MPG") +
+    ggplot2::theme_minimal()
+}
