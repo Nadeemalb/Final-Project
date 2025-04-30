@@ -15,3 +15,8 @@ summarize_mpg <- function() {
       .groups = "drop"
     )
 }
+
+test_that("summarize_mpg returns expected columns", {
+  result <- summarize_mpg()
+  expect_true(all(c("class", "avg_cty", "avg_hwy") %in% colnames(result)))
+})
