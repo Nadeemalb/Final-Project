@@ -30,3 +30,14 @@ summarize_mpg <- function() {
       .groups = "drop"
     )
 }
+plot_mpg <- function() {
+  ggplot2::ggplot(mpg, ggplot2::aes(x = cty, y = hwy, color = class)) +
+    ggplot2::geom_point() +
+    ggplot2::labs(
+      title = "City vs Highway MPG",
+      x = "City MPG",
+      y = "Highway MPG"
+    ) +
+    ggplot2::theme_minimal()
+}
+
